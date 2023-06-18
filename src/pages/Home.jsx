@@ -6,17 +6,14 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import MailIcon from '@mui/icons-material/Mail';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import MoreIcon from '@mui/icons-material/MoreVert';
 import { LoginRounded, Medication } from '@mui/icons-material';
-import * as reactRouterDom from 'react-router-dom';
+import OrthopedicCard from "./DepartmentCards/OrthopedicCard"
+import PathologyCard from './DepartmentCards/PathologyCard';
+import CancerCard from './DepartmentCards/CancerCard';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -181,14 +178,17 @@ export default function PrimarySearchAppBar() {
                 color="inherit"
                 onClick={handleLoginClick}
                 href="/login">
+                <Typography>Login</Typography>
                 <LoginRounded />
             </IconButton>
           </Box>
-
         </Toolbar>
       </AppBar>
       {renderMobileMenu}
       {renderMenu}
+      <OrthopedicCard />
+      <PathologyCard />
+      <CancerCard />
     </Box>
   );
 }
