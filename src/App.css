@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+
+body {
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.quote{
+  align-content: end;
+}

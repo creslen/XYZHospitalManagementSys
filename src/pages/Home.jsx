@@ -14,6 +14,11 @@ import { LoginRounded, Medication } from '@mui/icons-material';
 import OrthopedicCard from "./DepartmentCards/OrthopedicCard"
 import PathologyCard from './DepartmentCards/PathologyCard';
 import CancerCard from './DepartmentCards/CancerCard';
+import { Button } from '@mui/material';
+import HomeCard from './HomeCard';
+import HomeDialog from './HomeDialog';
+
+
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -142,8 +147,9 @@ export default function PrimarySearchAppBar() {
   );
 
   return (
-    <Box sx={{ display: 'flex'}}>
-      <AppBar position="fixed">
+
+    <Box sx={{ display: 'flex'}} >
+      <AppBar position="fixed"  >
         <Toolbar>
             <Medication sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
             <Typography
@@ -174,6 +180,7 @@ export default function PrimarySearchAppBar() {
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+            <Button variant="outlined">About</Button>
             <IconButton size="large" 
                 color="inherit"
                 onClick={handleLoginClick}
@@ -186,9 +193,19 @@ export default function PrimarySearchAppBar() {
       </AppBar>
       {renderMobileMenu}
       {renderMenu}
-      <OrthopedicCard />
-      <PathologyCard />
-      <CancerCard />
+           
+        <CancerCard />
+        <PathologyCard /> 
+        <OrthopedicCard />
+        
+        <div> 
+            <br /> <br />
+             <HomeDialog />
+             <br />
+            <HomeCard />
+        </div>
+ 
     </Box>
+    
   );
 }

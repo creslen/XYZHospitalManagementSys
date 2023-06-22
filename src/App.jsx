@@ -6,6 +6,8 @@ import DischargedForm from './pages/Forms/Discharged';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Routes from "./pages/Routes"
 import Tabs from "./pages/Dashboard/Tabs"
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default function App() {
@@ -13,17 +15,17 @@ export default function App() {
   const defaultTheme = createTheme({
     palette: {
       primary: {
-        main: "#c93ab5"
+        main: "#8e7ffb"
       }
     }
   });
 
   return (
-    <>
+    <div className='App'>
       <ThemeProvider theme={defaultTheme}>
         <Routes />
       </ThemeProvider>
-    </>
+    </div>
   );
 }
 

@@ -7,7 +7,7 @@ import { Button, CardActionArea, CardActions } from '@mui/material';
 
 export default function CancerCard() {
   return (
-    <Card sx={{ maxWidth: 340 }}>
+    <Card sx={{ maxWidth: 300 }}>
       <CardActionArea>
         <CardMedia
           component="img"

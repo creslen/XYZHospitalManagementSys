@@ -56,6 +56,14 @@ export default function SignIn() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            backgroundColor: 'white',
+            p: 4,
+            transition: 'box-shadow 0.3s ease-in-out',
+            borderRadius: '8px', 
+            '&:focus': {
+            outline: 'none', 
+            boxShadow: '0 0 0 4px rgba(201, 58, 181, 0.8)',
+            }
           }}
         >
           <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>

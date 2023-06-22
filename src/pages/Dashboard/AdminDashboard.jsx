@@ -142,6 +142,7 @@ export default function AdminDashboard() {
   };
 
   return (
+
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
