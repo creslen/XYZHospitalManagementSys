@@ -1,6 +1,6 @@
 import Card from 'react-bootstrap/Card';
 
-function WithHeaderAndQuoteExample() {
+function HomeCard() {
   return (
     <Card id='quote'>
       <Card.Header>XYZ Hospital</Card.Header>
@@ -20,4 +20,4 @@ function WithHeaderAndQuoteExample() {
   );
 }
 
-export default WithHeaderAndQuoteExample;
+export default HomeCard;
