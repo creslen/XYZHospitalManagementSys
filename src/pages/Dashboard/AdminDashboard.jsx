@@ -24,6 +24,9 @@ import AddPatient from '../CardButtons/AddPatient';
 import AddDoctor from '../CardButtons/AddDoctor'
 import PatientCard from './PatientCard';
 import DoctorCard from './DoctorCard';
+import RoomCard from './RoomCard';
+import FeesCard from './FeesCard';
+import DepartmentCard from './DepartmentCard';
 
 
 
@@ -96,11 +99,13 @@ export default function AdminDashboard() {
           </Box>
         </Toolbar>
       </AppBar>
-
-      
+    <div className='cards'>
       <DoctorCard />
       <PatientCard />
-
+      <RoomCard />
+      <FeesCard />
+      <DepartmentCard />
+    </div>
     </Box>
   );
 }

@@ -12,11 +12,9 @@ import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import { Medication } from '@mui/icons-material';
 import Button from '@mui/material/Button';
-import CancerCard from './DepartmentCards/CancerCard';
-import PathologyCard from './DepartmentCards/PathologyCard';
-import OrthopedicCard from './DepartmentCards/OrthopedicCard';
 import HomeCard from './HomeCard';
 import HomeDialog from './HomeDialog';
+import HomeTabs from './HomeTabs';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -105,12 +103,12 @@ export default function PrimarySearchAppBar() {
       onClose={handleMenuClose}
     >
       <MenuItem>
-        <Button variant="text" onClick={handleLoginClick} href="/adminlogin">
+        <Button variant="contained" onClick={handleLoginClick} href="/adminlogin">
           Admin
         </Button>
       </MenuItem>
       <MenuItem>
-        <Button variant="text" onClick={handleLoginClick} href="/stafflogin">
+        <Button variant="contained" onClick={handleLoginClick} href="/stafflogin">
           Staff
         </Button>
       </MenuItem>
@@ -183,6 +181,7 @@ export default function PrimarySearchAppBar() {
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <Button variant="outlined">About</Button>
+            <HomeDialog />
             <IconButton
               size="large"
               edge="end"
@@ -196,22 +195,17 @@ export default function PrimarySearchAppBar() {
             </IconButton>
           </Box>
         </Toolbar>
+        <HomeTabs />
       </AppBar>
 
       {renderMobileMenu}
       {renderMenu}
-      <CancerCard />
-        <PathologyCard />
-        <OrthopedicCard />
-      <Box sx={{ marginTop: '64px' }}>
 
-        <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
-          <HomeDialog />
-        </Box>
-        <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
+      
+        <div className='home'>
           <HomeCard />
-        </Box>
-      </Box>
-    </Box>
+      </div>
+ 
+  </Box>
   );
 }

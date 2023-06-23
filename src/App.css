@@ -50,3 +50,24 @@ body {
 .quote{
   align-content: end;
 }
+
+.cards{
+  column-count: 5;
+  column-gap: 20;
+}
+
+.homecard{
+  column-count: 3;
+  column-gap: 10;
+
+}
+
+.home {
+  position: fixed;
+  left: 40%;
+  bottom: 0.5%;
+}
+#quote {
+  width: 340px; 
+  height: 150px; 
+}

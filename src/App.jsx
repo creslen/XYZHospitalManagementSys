@@ -10,7 +10,7 @@ export default function App() {
   const defaultTheme = createTheme({
     palette: {
       primary: {
-        main: "#8e7ffb"
+        main: "#f2f2fc"
       }
     }
   });
