@@ -103,12 +103,12 @@ export default function PrimarySearchAppBar() {
       onClose={handleMenuClose}
     >
       <MenuItem>
-        <Button variant="text" onClick={handleLoginClick} href="/adminlogin">
+        <Button variant="contained" onClick={handleLoginClick} href="/adminlogin">
           Admin
         </Button>
       </MenuItem>
       <MenuItem>
-        <Button variant="text" onClick={handleLoginClick} href="/stafflogin">
+        <Button variant="contained" onClick={handleLoginClick} href="/stafflogin">
           Staff
         </Button>
       </MenuItem>
