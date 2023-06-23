@@ -15,6 +15,7 @@ import Button from '@mui/material/Button';
 import HomeCard from './HomeCard';
 import HomeDialog from './HomeDialog';
 import HomeTabs from './HomeTabs';
+import HomeLocation from './HomeLocation';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -169,19 +170,11 @@ export default function PrimarySearchAppBar() {
             XYZ Hospital
           </Typography>
           <span />
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
+          <Box sx={{ flexGrow: 2 }} />
+          <HomeLocation />
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <Button variant="outlined">About</Button>
-            <HomeDialog />
+
             <IconButton
               size="large"
               edge="end"
@@ -200,8 +193,6 @@ export default function PrimarySearchAppBar() {
 
       {renderMobileMenu}
       {renderMenu}
-
-      
         <div className='home'>
           <HomeCard />
       </div>
