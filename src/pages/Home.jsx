@@ -106,12 +106,12 @@ export default function PrimarySearchAppBar() {
     >
       <MenuItem>
         <Button variant="text" onClick={handleLoginClick} href="/adminlogin">
-          Admin
+          Log in as Admin
         </Button>
       </MenuItem>
       <MenuItem>
         <Button variant="text" onClick={handleLoginClick} href="/stafflogin">
-          Staff
+        Log in as Staff
         </Button>
       </MenuItem>
     </Menu>
