@@ -2,9 +2,11 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const Home = React.lazy(() => import("./Home"));
-const Login = React.lazy(() => import("./Login"));
+const AdminLogin = React.lazy(() => import("./AdminLogin"));
+const StaffLogin = React.lazy(() => import("./StaffLogin"));
 const AdminDashboard = React.lazy(() => import("./Dashboard/AdminDashboard"));
-const AddPatient = React.lazy(() => import("./Forms/AddPatient"));
+const StaffDashboard = React.lazy(() => import("./Dashboard/StaffDashboard"));
+
 
 export default function AppRoute() {
   return (
@@ -12,9 +14,11 @@ export default function AppRoute() {
       <BrowserRouter>
         <Routes>
           <Route path="/home" element={<Home />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/adminlogin" element={<AdminLogin />} />
+          <Route path="/stafflogin" element={<StaffLogin />} />
           <Route path="/admindashboard" element={<AdminDashboard />} />
-          <Route path="/addpatient" element={<AddPatient />} />
+          <Route path="/staffdashboard" element={<StaffDashboard />} />
+
         </Routes>
       </BrowserRouter>
     </>

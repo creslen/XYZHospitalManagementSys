@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -10,17 +10,13 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import { LoginRounded, Medication } from '@mui/icons-material';
-import OrthopedicCard from "./DepartmentCards/OrthopedicCard"
-import PathologyCard from './DepartmentCards/PathologyCard';
+import { Medication } from '@mui/icons-material';
+import Button from '@mui/material/Button';
 import CancerCard from './DepartmentCards/CancerCard';
-import { Button, Paper } from '@mui/material';
+import PathologyCard from './DepartmentCards/PathologyCard';
+import OrthopedicCard from './DepartmentCards/OrthopedicCard';
 import HomeCard from './HomeCard';
 import HomeDialog from './HomeDialog';
-
-
-
-
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -52,7 +48,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
@@ -63,10 +58,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const handleLoginClick = () => {
-    
-    history.push('/login');
-  };
-  
+  // Handle login click logic here
+  // For example, redirect to the admin login page
+  // history.push('/adminlogin');
+};
 
 export default function PrimarySearchAppBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -108,10 +103,17 @@ export default function PrimarySearchAppBar() {
       }}
       open={isMenuOpen}
       onClose={handleMenuClose}
-      
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      <MenuItem>
+        <Button variant="text" onClick={handleLoginClick} href="/adminlogin">
+          Admin
+        </Button>
+      </MenuItem>
+      <MenuItem>
+        <Button variant="text" onClick={handleLoginClick} href="/stafflogin">
+          Staff
+        </Button>
+      </MenuItem>
     </Menu>
   );
 
@@ -132,44 +134,42 @@ export default function PrimarySearchAppBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-    
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           size="large"
-          aria-label="login"
+          aria-label="account of current user"
           aria-controls="primary-search-account-menu"
           aria-haspopup="true"
           color="inherit"
         >
           <AccountCircle />
         </IconButton>
-        <p>Login</p>
+        <p>Profile</p>
       </MenuItem>
     </Menu>
   );
 
   return (
-
-    <Box sx={{ display: 'flex'}}>
-      <AppBar position="fixed"  >
+    <Box sx={{ display: 'flex' }}>
+      <AppBar position="fixed">
         <Toolbar>
-            <Medication sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-            <Typography
-                variant="h6"
-                noWrap
-                component="a"
-                sx={{
-                mr: 2,
-                display: { xs: 'none', md: 'flex' },
-                fontFamily: 'monospace',
-                fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
-                }}
-            >
+          <Medication sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            sx={{
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >
             XYZ Hospital
-            </Typography>
+          </Typography>
           <span />
           <Search>
             <SearchIconWrapper>
@@ -183,31 +183,35 @@ export default function PrimarySearchAppBar() {
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <Button variant="outlined">About</Button>
-            <IconButton size="large" 
-                color="inherit"
-                onClick={handleLoginClick}
-                href="/login">
-                <Typography>Login</Typography>
-                <LoginRounded />
+            <IconButton
+              size="large"
+              edge="end"
+              aria-label="account of current user"
+              aria-controls={menuId}
+              aria-haspopup="true"
+              onClick={handleProfileMenuOpen}
+              color="inherit"
+            >
+              <AccountCircle />
             </IconButton>
           </Box>
         </Toolbar>
-      </AppBar >
+      </AppBar>
 
       {renderMobileMenu}
       {renderMenu}
-        <CancerCard />
-        <PathologyCard /> 
+      <CancerCard />
+        <PathologyCard />
         <OrthopedicCard />
-        
-        <div>  
-            <br /> <br />
-             <HomeDialog />
-             <br />
-            <HomeCard />
-        </div>
+      <Box sx={{ marginTop: '64px' }}>
 
+        <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
+          <HomeDialog />
+        </Box>
+        <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
+          <HomeCard />
+        </Box>
+      </Box>
     </Box>
-    
   );
 }
