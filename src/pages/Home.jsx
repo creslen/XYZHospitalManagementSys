@@ -14,9 +14,10 @@ import { LoginRounded, Medication } from '@mui/icons-material';
 import OrthopedicCard from "./DepartmentCards/OrthopedicCard"
 import PathologyCard from './DepartmentCards/PathologyCard';
 import CancerCard from './DepartmentCards/CancerCard';
-import { Button } from '@mui/material';
+import { Button, Paper } from '@mui/material';
 import HomeCard from './HomeCard';
 import HomeDialog from './HomeDialog';
+
 
 
 
@@ -107,6 +108,7 @@ export default function PrimarySearchAppBar() {
       }}
       open={isMenuOpen}
       onClose={handleMenuClose}
+      
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
@@ -148,7 +150,7 @@ export default function PrimarySearchAppBar() {
 
   return (
 
-    <Box sx={{ display: 'flex'}} >
+    <Box sx={{ display: 'flex'}}>
       <AppBar position="fixed"  >
         <Toolbar>
             <Medication sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -190,21 +192,21 @@ export default function PrimarySearchAppBar() {
             </IconButton>
           </Box>
         </Toolbar>
-      </AppBar>
+      </AppBar >
+
       {renderMobileMenu}
       {renderMenu}
-           
         <CancerCard />
         <PathologyCard /> 
         <OrthopedicCard />
         
-        <div> 
+        <div>  
             <br /> <br />
              <HomeDialog />
              <br />
             <HomeCard />
         </div>
- 
+
     </Box>
     
   );
