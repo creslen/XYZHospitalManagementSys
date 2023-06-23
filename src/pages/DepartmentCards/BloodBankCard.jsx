@@ -5,22 +5,22 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 
-export default function CancerCard() {
+export default function BloodBlankCard() {
   return (
     <Card>
       <CardActionArea>
         <CardMedia
           component="img"
           height="200"
-          image="./cancer.jpg"
-          alt="orthopedic-logo"
+          image="./bloodbank.jpg"
+          alt="bloodbank-logo"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-           Cancer Department
+           BloodBank Department
           </Typography>
           <Typography variant="body2" color="text.secondary">
-          Cancer department diagnoses and treats cancer, creating personalized treatment plans.
+          Blood bank department collects, tests, stores, and distributes blood for transfusions and emergencies.
           </Typography>
         </CardContent>
       </CardActionArea>

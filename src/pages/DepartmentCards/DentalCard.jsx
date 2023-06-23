@@ -5,22 +5,22 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 
-export default function CancerCard() {
+export default function DentalCard() {
   return (
     <Card>
       <CardActionArea>
         <CardMedia
           component="img"
           height="200"
-          image="./cancer.jpg"
-          alt="orthopedic-logo"
+          image="./dental.jpg"
+          alt="dental-logo"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-           Cancer Department
+           Dental Department
           </Typography>
           <Typography variant="body2" color="text.secondary">
-          Cancer department diagnoses and treats cancer, creating personalized treatment plans.
+          Dental department promotes oral health through examinations, cleanings, fillings, and treatments.
           </Typography>
         </CardContent>
       </CardActionArea>

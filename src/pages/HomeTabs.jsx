@@ -7,6 +7,10 @@ import TabPanel from '@mui/lab/TabPanel';
 import CancerCard from './DepartmentCards/CancerCard';
 import PathologyCard from './DepartmentCards/PathologyCard';
 import OrthopedicCard from './DepartmentCards/OrthopedicCard';
+import Home from './Home'
+import PrimarySearchAppBar from './Home';
+import DentalCard from './DepartmentCards/DentalCard';
+import BloodBlankCard from './DepartmentCards/BloodBankCard';
 
 export default function HomeTabs() {
   const [value, setValue] = React.useState('1');
@@ -14,26 +18,32 @@ export default function HomeTabs() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+    handleMobileMenuClose();
+  };
 
   return (
     <Box sx={{ width: '100%', typography: 'body1' }}>
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <TabList onChange={handleChange} aria-label="lab API tabs example">
+          <Tab label="Home" value="home" />
             <Tab label="Departments" value="dept" />
-            <Tab label="Item Two" value="2" />
-            <Tab label="Item Three" value="3" />
+            <Tab label="Services" value="service" />
           </TabList>
         </Box>
+        <TabPanel value="home"></TabPanel>
         <TabPanel value="dept">
             <div className='homecard'>
                 <CancerCard />
                 <PathologyCard />
                 <OrthopedicCard />
+                <DentalCard />
+                <BloodBlankCard />
             </div>
         </TabPanel>
-        <TabPanel value="2">Item Two</TabPanel>
-        <TabPanel value="3">Item Three</TabPanel>
+        <TabPanel value="service">Item Three</TabPanel>
       </TabContext>
     </Box>
   );

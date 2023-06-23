@@ -54,11 +54,14 @@ body {
 .cards{
   column-count: 5;
   column-gap: 20;
+
 }
 
+
 .homecard{
-  column-count: 3;
+  column-count: 5;
   column-gap: 10;
+  resize: both;
 
 }
 

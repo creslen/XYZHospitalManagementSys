@@ -7,7 +7,7 @@ import { Button, CardActionArea, CardActions } from '@mui/material';
 
 export default function OrthopedicCard() {
   return (
-    <Card sx={{ maxWidth: 320 }}>
+    <Card>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -20,14 +20,10 @@ export default function OrthopedicCard() {
             Orthopedic Department
           </Typography>
           <Typography variant="body2" color="text.secondary">
-          Orthopedics is specializing in musculoskeletal disorders. It encompasses the diagnosis and treatment of conditions like fractures, arthritis, and sports injuries.
-        </Typography>
+          Orthopedics specializes in musculoskeletal disorders, treating conditions like fractures, arthritis, and injuries.        </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          View Facilities
-        </Button>
       </CardActions>
     </Card>
   );

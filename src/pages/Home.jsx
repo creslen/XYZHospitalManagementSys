@@ -8,12 +8,10 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import { Medication } from '@mui/icons-material';
 import Button from '@mui/material/Button';
 import HomeCard from './HomeCard';
-import HomeDialog from './HomeDialog';
 import HomeTabs from './HomeTabs';
 import HomeLocation from './HomeLocation';
 
