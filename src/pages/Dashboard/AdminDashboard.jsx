@@ -7,11 +7,11 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { styled, useTheme } from '@mui/material/styles';
 import * as React from 'react';
-import PatientCard from './PatientCard';
-import DoctorCard from './DoctorCard';
-import RoomCard from './RoomCard';
-import FeesCard from './FeesCard';
-import DepartmentCard from './DepartmentCard';
+import PatientCard from '../Dashboard/CardsAdmin/PatientCard';
+import DoctorCard from '../Dashboard/CardsAdmin/DoctorCard';
+import RoomCard from '../Dashboard/CardsAdmin/RoomCard';
+import FeesCard from '../Dashboard/CardsAdmin/FeesCard';
+import DepartmentCard from '../Dashboard/CardsAdmin/DepartmentCard';
 
 
 const AppBar = styled(MuiAppBar, {

@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
-import AddDepartment from '../CardButtons/AddDepartment'
+import AddDepartment from '../../CardButtons/AddDepartment'
 
 
 export default function DepartmentCard() {

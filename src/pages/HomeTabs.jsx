@@ -11,6 +11,7 @@ import Home from './Home'
 import PrimarySearchAppBar from './Home';
 import DentalCard from './DepartmentCards/DentalCard';
 import BloodBlankCard from './DepartmentCards/BloodBankCard';
+import HomeServices from './HomeServices';
 
 export default function HomeTabs() {
   const [value, setValue] = React.useState('1');
@@ -28,7 +29,7 @@ export default function HomeTabs() {
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <TabList onChange={handleChange} aria-label="lab API tabs example">
-          <Tab label="Home" value="home" />
+            <Tab label="Home" value="home" />
             <Tab label="Departments" value="dept" />
             <Tab label="Services" value="service" />
           </TabList>
@@ -43,7 +44,11 @@ export default function HomeTabs() {
                 <BloodBlankCard />
             </div>
         </TabPanel>
-        <TabPanel value="service">Item Three</TabPanel>
+        <TabPanel value="service">
+            <div className='homeservice'>
+                <HomeServices />
+            </div>
+        </TabPanel>
       </TabContext>
     </Box>
   );
