@@ -75,3 +75,8 @@ body {
   height: 95px; 
 }
 
+.staffcard{
+  column-count: 5;
+  column-gap: 20;
+
+}

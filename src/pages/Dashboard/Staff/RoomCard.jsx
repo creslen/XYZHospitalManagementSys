@@ -4,9 +4,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
-import ViewPatient from '../Staff/ViewPatient'
+import ViewRoom from '../Staff/ViewRoom'
 
-export default function PatientCard() {
+export default function RoomCard() {
   return (
     <Card sx={{ maxWidth: 300 }}>
       <CardActionArea>
@@ -18,16 +18,16 @@ export default function PatientCard() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-           Patient
+           Room
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            patient
+            List of All Room
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          <ViewPatient />
+          <ViewRoom />
         </Button>
       </CardActions>
     </Card>

@@ -1,4 +1,4 @@
-import { LogoutRounded } from '@mui/icons-material';
+import { LogoutRounded, RoomOutlined } from '@mui/icons-material';
 import MuiAppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import { styled, useTheme } from '@mui/material/styles';
 import * as React from 'react';
 import PatientCard from './Staff/PatientCard';
+import RoomCard from './Staff/RoomCard';
 
 
 
@@ -82,8 +83,10 @@ export default function AdminDashboard() {
       </AppBar>
 
       
-      
-      <PatientCard />
+      <div className='staffcard'>
+        <PatientCard />
+        <RoomCard />
+      </div>
 
     </Box>
   );
