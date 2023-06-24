@@ -12,11 +12,11 @@ export default function HomeLocation() {
         <span style={{ marginRight: '16px' }}>
             731 Aurora Boulevard 1100,Quezon City 
         </span>
-        <Phone />
+        <Phone style={{ marginRight: '4px' }}/>
         <span style={{ marginRight: '16px' }}>
         +63985673501
         </span>
-        <Email />
+        <Email style={{ marginRight: '4px' }}/>
         xyzhospital@gmail.com
         </Typography>
     </div>
