@@ -4,30 +4,31 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
-import AddDoctor from '../CardButtons/AddDoctor';
+import AddRoom from '../../CardButtons/AddRoom'
 
-export default function DoctorCard() {
+
+export default function RoomCard() {
   return (
-    <Card sx={{ maxWidth: 345}}>
+    <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="200"
-          image="/doctor.jpg"
-          alt="doctor-pic"
+          image="room.jpg"
+          alt="room-pic"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Doctor
+           Rooms
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            secret
+            Rooms
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          <AddDoctor />
+          <AddRoom />
         </Button>
       </CardActions>
     </Card>
