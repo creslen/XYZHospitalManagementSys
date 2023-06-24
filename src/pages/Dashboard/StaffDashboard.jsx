@@ -1,29 +1,13 @@
-import { AccountBalanceWallet, Apps, Bed, LocalHotel, LogoutRounded, People } from '@mui/icons-material';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import HomeIcon from '@mui/icons-material/Home';
-import MenuIcon from '@mui/icons-material/Menu';
-import SettingsIcon from '@mui/icons-material/Settings';
+import { LogoutRounded } from '@mui/icons-material';
 import MuiAppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
-import MuiDrawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { styled, useTheme } from '@mui/material/styles';
 import * as React from 'react';
-import Logo from '/xyz.png';
-import AddPatient from '../CardButtons/AddPatient';
-import AddDoctor from '../CardButtons/AddDoctor'
-import PatientCard from './PatientCard';
-import DoctorCard from './DoctorCard';
+import PatientCard from './Staff/PatientCard';
 
 
 
@@ -98,7 +82,7 @@ export default function AdminDashboard() {
       </AppBar>
 
       
-      <DoctorCard />
+      
       <PatientCard />
 
     </Box>
