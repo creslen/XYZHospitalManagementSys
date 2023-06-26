@@ -6,19 +6,29 @@ import Typography from '@mui/material/Typography';
 
 const images = [
   {
-    url: '/static/images/buttons/breakfast.jpg',
-    title: 'Breakfast',
-    width: '40%',
+    url: 'operating.jpg',
+    title: 'Operating Room',
+    width: '20%',
   },
   {
-    url: '/static/images/buttons/burgers.jpg',
-    title: 'Burgers',
-    width: '30%',
+    url: 'blood.jpg',
+    title: 'Blood Storage',
+    width: '20%',
   },
   {
-    url: '/static/images/buttons/camera.jpg',
-    title: 'Camera',
-    width: '30%',
+    url: 'isolation.jpg',
+    title: 'Isolation Rooms',
+    width: '20%',
+  },
+  {
+    url: 'mir.jpg',
+    title: 'MRI Scanners',
+    width: '20%',
+  },
+  {
+    url: 'ortho.jpg',
+    title: 'Orthopedic Clinics',
+    width: '20%',
   },
 ];
 
