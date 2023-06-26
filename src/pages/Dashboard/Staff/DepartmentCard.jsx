@@ -21,7 +21,7 @@ export default function DepartmentCard() {
            Department
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            List of All Departments
+          Departments
           </Typography>
         </CardContent>
       </CardActionArea>

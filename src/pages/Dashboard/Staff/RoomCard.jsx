@@ -13,7 +13,7 @@ export default function RoomCard() {
         <CardMedia
           component="img"
           height="200"
-          image="patient.jpg"
+          image="room.jpg"
           alt="patient-pic"
         />
         <CardContent>
@@ -21,7 +21,7 @@ export default function RoomCard() {
            Room
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            List of All Room
+            Room
           </Typography>
         </CardContent>
       </CardActionArea>

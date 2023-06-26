@@ -21,7 +21,7 @@ export default function PatientCard() {
            Patient
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            patient
+            Patient
           </Typography>
         </CardContent>
       </CardActionArea>
