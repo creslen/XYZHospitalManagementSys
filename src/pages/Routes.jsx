@@ -13,7 +13,7 @@ export default function AppRoute() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/adminlogin" element={<AdminLogin />} />
           <Route path="/stafflogin" element={<StaffLogin />} />
           <Route path="/admindashboard" element={<AdminDashboard />} />
