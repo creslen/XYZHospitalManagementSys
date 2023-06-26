@@ -72,7 +72,7 @@ export default function AdminDashboard() {
               <IconButton size="large" 
                   color="inherit"
                   onClick={handleLoginClick}
-                  href="/home">
+                  href="/">
                   <Typography>Logout</Typography>
                   <LogoutRounded />
               </IconButton>
